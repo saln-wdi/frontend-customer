@@ -1,0 +1,10 @@
+
+.img-fluid{
+    background-image: url('https://i.pinimg.com/originals/62/c3/f6/62c3f6eba45836514e4a9c19ba4ae260.gif');
+    padding-bottom: 20rem;
+}
+#first {
+    display: inline-block;
+    width: 150px;
+}
+

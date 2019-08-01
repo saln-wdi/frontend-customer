@@ -26,11 +26,12 @@ class Services extends Component {
         return(
             <div>
                 {this.state.services.map(service => 
+                <div className=" list-group-item ">
                     <Link to={`/users/${this.props.match.params.uid}/categories/${this.props.match.params.cid}/services/${service.id}`}
                      key={service.id}>
                         <h1>{service.service}</h1>
                         <p>{service.description}</p>
-                    </Link> 
+                    </Link> </div>
                 )}
             </div>
         )

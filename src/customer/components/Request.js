@@ -1,7 +1,7 @@
 import React, {Component} from 'react'
 import { withRouter } from 'react-router-dom'
 import {indexing} from '../api'
-
+import './Request.css'
 
 class Request extends Component {
     state = 
@@ -34,15 +34,21 @@ class Request extends Component {
     }
     render() {
         return(
-            <div>
-               <form onSubmit={this.handleSubmit}>
-                   <label htmlFor="date">Date</label>
+            
+                 <div className="card">
+                <h5 class="card-header info-color white-text text-center py-4">
+        <strong id ="head-color">Send request</strong>
+    </h5>
+               <form className="text-center" id ="eds" onSubmit={this.handleSubmit}>
+               <div className="md-form mt-3">
+                   <label  id="nlabel" htmlFor="date">Date</label>
                    <input type="date" name="date"
-                   value={this.state.date} onChange={this.handleChange}/>
-                   <label htmlFor="description">Description</label>
-                   <textarea name="description"
-                   value={this.state.description} onChange={this.handleChange}/>
-                   <input type="submit" value="Request" />
+                   value={this.state.date} onChange={this.handleChange}/></div>
+                   <div className="md-form mt-3">
+                   <label id="dlabel" htmlFor="description">Description</label>
+                   <textarea className="form-control" id="formGroupExampleInput" name="description"
+                   value={this.state.description} onChange={this.handleChange}/></div>
+                   <input id ="ser" className="btn btn-secondary" type="submit" value="Request" />
                </form>
             </div>
         )
