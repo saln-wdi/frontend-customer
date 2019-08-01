@@ -25,6 +25,7 @@ class Services extends Component {
     render() {
         return(
             <div>
+                 <h3> Services</h3>
                 {this.state.services.map(service => 
                 <div className=" list-group-item ">
                     <Link to={`/users/${this.props.match.params.uid}/categories/${this.props.match.params.cid}/services/${service.id}`}

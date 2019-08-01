@@ -22,7 +22,7 @@ class Users extends Component {
     render() {
         return(
             <div>
-                 <h3> Available business</h3>
+                 <h3> Lists of business</h3>
                 {this.state.users.map(user => 
                 
                     <Link  to={`/users/${user.id}`}  key={user.id}>
